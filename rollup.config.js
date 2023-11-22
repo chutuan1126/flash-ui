@@ -36,7 +36,6 @@ export default [
         config: {
           path: './postcss.config.js',
         },
-        extract: true,
         extensions: ['.css'],
         minimize: true,
         inject: {
@@ -48,8 +47,8 @@ export default [
     external: ["react", "react-dom", "tailwindcss"],
   },
   {
-    input: "build/esm/index.d.ts",
-    output: [{ file: "build/index.d.ts", format: "esm" }],
+    input: "dist/esm/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
     external: [/\.css$/],
   },
